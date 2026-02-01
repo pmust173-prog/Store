@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Mini Storefront</title>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+	<header class="top">
+		<div class="brand">MiniStore</div>
+		<nav class="filters">
+			<button data-filter="all" class="active">All</button>
+			<button data-filter="new">New</button>
+			<button data-filter="sold">Sold Out</button>
+			<button data-filter="sale">-50%</button>
+		</nav>
+		<div class="auth">
+			<button id="loginBtn">Log in</button>
+			<button id="signupBtn">Sign up</button>
+		</div>
+	</header>
+
+	<main>
+		<section id="products" class="grid" aria-live="polite">
+			<!-- products rendered here -->
+		</section>
+	</main>
+
+	<!-- Store details -->
+	<section class="store-details">
+	  <div class="container">
+	    <div class="details">
+	      <h3>About MiniStore</h3>
+	      <p>MiniStore offers curated clothing and fragrances with fast delivery. Shop quality items handpicked for style and comfort.</p>
+	      <ul class="info">
+	        <li><strong>Address:</strong> 123 Market St, Your City</li>
+	        <li><strong>Hours:</strong> Mon–Sat 9:00–18:00</li>
+	        <li><strong>Contact:</strong> +213 123 456 789</li>
+	        <li><strong>Email:</strong> info@ministore.example</li>
+	      </ul>
+	    </div>
+		<div class="links">
+			<h4>Customer Care</h4>
+			<p>Returns · Shipping · FAQs</p>
+			<h4 style="margin-top:12px">Follow Us</h4>
+			<p>
+				<a href="https://www.instagram.com/musta.deo_11" target="_blank" rel="noopener">Instagram — @musta.deo_11</a>
+				· <a href="https://twitter.com/musta_deo_11" target="_blank" rel="noopener">Twitter</a>
+			</p>
+		</div>
+	  </div>
+	</section>
+
+	<footer>
+		<p>© MiniStore — demo site</p>
+	</footer>
+
+	<!-- Simple modals for login / signup -->
+	<div id="modal" class="modal hidden">
+		<div class="modal-content">
+			<button class="close" id="closeModal">✕</button>
+			<h2 id="modalTitle">Log in</h2>
+			<form id="authForm">
+				<label id="labelUsername">Username<input type="text" id="authUsername" required></label>
+				<label id="labelEmail">Email (Gmail)<input type="email" id="email" placeholder="you@gmail.com" required></label>
+				<label id="labelPassword">Password<input type="password" id="password" required></label>
+				<button type="submit" id="authSubmit">Submit</button>
+			</form>
+			<div id="authMessage" class="message"></div>
+		</div>
+	</div>
+
+	<!-- Product detail modal (multiple photos, coupon, delivery form) -->
+	<div id="productModal" class="product-modal hidden">
+	  <div class="product-modal-content">
+	    <button class="close" id="closeProductModal">✕</button>
+	    <div class="product-grid">
+	      <div class="carousel">
+	        <button class="car-prev">‹</button>
+	        <div class="car-view" id="pmImages">
+	          <!-- images inserted here -->
+	        </div>
+	        <button class="car-next">›</button>
+	      </div>
+	      <div class="product-info">
+	        <h2 id="pmTitle">Product</h2>
+	        <div id="pmPrice" class="price"></div>
+	        <div class="coupon">
+	          <input id="pmCoupon" placeholder="Coupon code (optional)">
+	          <button id="pmApplyCoupon">Apply</button>
+	          <div id="pmCouponMsg" class="message"></div>
+	        </div>
+	        <form id="orderForm">
+	          <label>Full name<input id="pmName" required></label>
+	          <label>Address<textarea id="pmAddress" rows="3" required></textarea></label>
+	          <label>Phone<input id="pmPhone" required></label>
+	          <button type="submit" id="pmOrder">Place Order</button>
+	        </form>
+	        <div id="pmMessage" class="message"></div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<script src="script.js" defer></script>
+</body>
+
+</html>
