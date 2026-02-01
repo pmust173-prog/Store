@@ -1,11 +1,11 @@
 const products = [
   // using local image files from the `ai/image` folder — one distinct photo per product
   { id:1, name:'Classic Tee', price:29.99, img:'pexels-alokkd1-30999129 (1).jpg', isNew:true, sold:false, discount:0, description:'Comfortable cotton tee with a modern cut.', highlights:['100% cotton','Breathable','Machine washable'] },
-  { id:2, name:'Leather Jacket', price:149.99, img:'image/pexels-jay-soundo-2148060180-33820362.jpg', isNew:false, sold:false, discount:50, description:'Premium leather jacket — timeless style.', highlights:['Genuine leather','Zip pockets','Tailored fit'] },
-  { id:3, name:'Summer Dress', price:59.99, img:'image/pexels-jay-soundo-2148060180-33820361.jpg', isNew:true, sold:false, discount:0, description:'Lightweight dress for warm days and evenings.', highlights:['Light fabric','Easy care','Flattering silhouette'] },
-  { id:4, name:'Signature Perfume', price:79.99, img:'image/pexels-arturoaez225-10701986.jpg', isNew:false, sold:true, discount:0, description:'A long-lasting signature scent with floral notes.', highlights:['Long-lasting','Elegant bottle','Perfect gift'] },
-  { id:5, name:'Sneakers', price:89.99, img:'image/pexels-syednouman-7400855.jpg', isNew:false, sold:false, discount:50, description:'Comfortable sneakers for everyday wear.', highlights:['Cushioned sole','Breathable mesh','Durable outsole'] },
-  { id:6, name:'Fragrance Gift Set', price:49.99, img:'image/pexels-god-picture-369194295-14466498.jpg', isNew:true, sold:false, discount:0, description:'Sampler set of our best fragrances.', highlights:['Includes 3 scents','Gift-ready','Travel size bottles'] }
+  { id:2, name:'parfume', price:149.99, img:'pexels-jay-soundo-2148060180-33820362.jpg', isNew:false, sold:false, discount:50, description:'Premium leather jacket — timeless style.', highlights:['Genuine leather','Zip pockets','Tailored fit'] },
+  { id:3, name:'john paul', price:59.99, img:'pexels-jay-soundo-2148060180-33820361.jpg', isNew:true, sold:false, discount:0, description:'Lightweight dress for warm days and evenings.', highlights:['Light fabric','Easy care','Flattering silhouette'] },
+  { id:4, name:'Signature Perfume', price:79.99, img:'pexels-arturoaez225-10701986.jpg', isNew:false, sold:true, discount:0, description:'A long-lasting signature scent with floral notes.', highlights:['Long-lasting','Elegant bottle','Perfect gift'] },
+  { id:5, name:'homme', price:89.99, img:'pexels-syednouman-7400855.jpg', isNew:false, sold:false, discount:50, description:'Comfortable sneakers for everyday wear.', highlights:['Cushioned sole','Breathable mesh','Durable outsole'] },
+  { id:6, name:'Fragrance Gift Set', price:49.99, img:'pexels-god-picture-369194295-14466498.jpg', isNew:true, sold:false, discount:0, description:'Sampler set of our best fragrances.', highlights:['Includes 3 scents','Gift-ready','Travel size bottles'] }
 ];
 
 const $products = document.getElementById('products');
@@ -303,4 +303,5 @@ if($orderForm){
 
 // init
 renderProducts('all');
+
 
